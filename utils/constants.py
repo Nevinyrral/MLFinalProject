@@ -8,6 +8,10 @@ class Method(Enum):
     STOCHASTIC = 1
     DETERMINISTIC = 2
 
+class Agent(Enum):
+    PLAYER = 1
+    OPPONENT = 2
+
 class Configuration:
     VALID_MOVES = {
         "down": {
@@ -35,3 +39,16 @@ class Configuration:
             "long": (-2, -2)
         }
     }
+
+    ENDGAME = {
+        "player": {
+            (0, 8), (0, 7), (1, 8), (0, 6), (1, 7), (2, 8), (0, 5), (1, 6),
+            (2, 7), (3, 8)
+        },
+        "opponent": {
+            (8, 0), (8, 1), (7, 0), (8, 2), (7, 1), (6, 0), (8, 3), (7, 2), 
+            (6, 1), (5, 0)
+        }
+    }
+
+    EXPLORATION_LEVEL = 3.5

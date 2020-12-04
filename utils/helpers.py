@@ -1,3 +1,5 @@
+from .constants import Mode, Method
+from lib.action_queue import ActionQueue
 
 class Helpers(object):
     @staticmethod
@@ -16,3 +18,18 @@ class Helpers(object):
         for k in reversed(tuple): 
             new_tup = new_tup + (k,) 
         return new_tup
+    
+    @staticmethod
+    def calculate_probability(
+        action_score, total_action_score, is_opponent, mode = Mode.HEURISTIC):
+        if total_action_score == 0:
+            return 1
+        if mode == Mode.HEURISTIC:
+            return float(action_score) / float(total_action_score)
+        else:
+            # TODO Later, need to construct DL model
+            return float(action_score) / float(total_action_score)
+
+    @staticmethod
+    def actions_score(actions):
+        return sum(map(lambda action: action.distance_score, actions))

@@ -18,7 +18,7 @@ def main():
     player_state = np.array(game_state["player"])
     opponent_state = np.array(game_state["opponent"])
 
-    mct = MCT(player_state, opponent_state)
+    mct = MCT(player_state, opponent_state, 200000)
 
 
 
