@@ -27,7 +27,7 @@ FLASK_APP=main.py flask run
 ## Uso
 
 Este proyecto expone un REST API en la interfaz http://localhost:5000 de tipo
-post llamado /simulate
+POST llamado /simulate
 
 #### POST /simulate
 
