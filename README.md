@@ -33,7 +33,7 @@ post llamado /simulate
 
 Cuerpo de la petición (En test.json se encuentra este ejemplo):
 
-´´´
+```
 {
     "player": [
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -59,7 +59,7 @@ Cuerpo de la petición (En test.json se encuentra este ejemplo):
     ],
     "iterations": 100000
 }
-´´´
+```
 
 Estructura:
 
@@ -74,7 +74,7 @@ iterations: número de iteraciones para el árbol de búsqueda Monte Carlo
 
 Respuesta (En response_example.json se encuentra este ejemplo):
 
-´´´
+```
 {
     "flow": [
         {
@@ -96,7 +96,7 @@ Respuesta (En response_example.json se encuentra este ejemplo):
     ],
     "next_move": [ [ 6, 2 ] ]
 }
-´´´
+```
 
 flow: contiene el flujo de la simulación con mejor puntaje
 - actions: los movimientos necesarios para llegar al estado
